@@ -1,0 +1,154 @@
+:root {
+    --black: #1E1E1E;
+    --white: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: Jost, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+.customButton {
+    font: inherit;
+    background-color: #2d2727;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.image-row {
+    margin-top: 2%;
+    columns : 5;
+    column-gap: 0;
+}
+
+.image-row img {
+    border: 1px solid black;
+    aspect-ratio: 1/1;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.image-row img:hover {
+    filter: none;
+    transform: scale(1.1);
+    z-index: 3000;
+}
+
+h1 {
+    overflow-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 3rem;
+    padding: 10px;
+}
+
+h2 {
+    animation: fadeIn 5s ease-in-out;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+p {
+    animation: fadeIn 5s ease-in-out;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+h3 {
+    margin-top: 15px;
+    overflow-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+button {
+    background-color: unset;
+    border: unset;
+}
+
+#info {
+    text-align: left;
+    margin-top: 20px;
+    background-color: #2d2727;
+    color: white;
+    min-height: 250px;
+    padding: 10px;
+} 
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+.style-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    
+}
+
+.description {
+    text-align: left;
+    animation: fadeIn 5s ease-in-out;
+
+}
+

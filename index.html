@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les monuments</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>LES MONUMENTS</h1>
+        <h3><u>Cliquez sur un monument ou sur son bouton pour obtenir une description </u></h3>
+    </header>
+    <div class="container">
+        
+        <section class="btn">
+            <input type = "button" value = "Tour Effeil" class="customButton" onclick="afficherTexte('La Tour Effeil','La tour Effeil est un élément emblématique de Paris, construit par Gustave Effeil pour l\'exposition universelle de 1989. Mesurant 330 mètres de hauteur, elle est faite de fer et a été initialement critiquée, mais elle est devenue un symbole mondial de la France et de l\'ingenierie moderne. Elle attire des millions de visiteurs chaques années pour sa vue panoramique sur la ville.')" />
+            <input type = "button" value = "Notre-Dame" class="customButton" onclick="afficherTexte('Notre-Dame','Notre-Dame de Paris est une cathédrale gothique emblématique, célèbre pour ses arches élancées, ses vitraux colorés et ses sculptures détaillées. Située sur l\'île de la Cité, elle est un symbole de l\'histoire et de l\'architecture française.')"/>
+            <input type="button" value="Arc De Triomphe" class="customButton" onclick="afficherTexte('Arc De Triomphe','L\'Arc de Triomphe, situé sur la Place Charles de Gaulle à Paris, est un monument emblématique construit pour honorer les soldats français qui ont combattu pendant les guerres révolutionnaires et napoléoniennes. Inauguré en 1836, il est décoré de sculptures et porte les noms de nombreux généraux, offrant une vue panoramique de la ville depuis son sommet.')"/>
+            <input type = "button" value = "Mont Saint-Michel" class="customButton" onclick="afficherTexte('Mont Saint Michel','Le Mont-Saint-Michel est une île rocheuse et une commune située en Normandie, célèbre pour son abbaye médiévale perchée au sommet d\'une colline. Entouré par des marées impressionnantes, ce site classé au patrimoine mondial de l\'Unesco est un symbole de l\'architecture religieuse et attire des millions de visiteurs chaque année.')"/>
+            <input type = "button" value = "Versailles" class="customButton" onclick="afficherTexte('Versailles','Le Château de Versailles, situé près de Paris, est un symbole de la puissance royale française et un chef-d\'œuvre de l\'architecture classique. Construit au XVIIe siècle, il est célèbre pour ses jardins à la française, ses somptueux appartements et la Galerie des Glaces, qui reflètent la grandeur de l\'Ancien Régime.')"/>
+        </section>
+
+
+    <div id="output"></div> 
+
+        <section class="image-row">
+            <img src="images/tour_eiffel.webp" alt="toureiffel" onclick="afficherTexte('La Tour Effeil','La tour Effeil est un élément emblématique de Paris, construit par Gustave Effeil pour l\'exposition universelle de 1989. Mesurant 330 mètres de hauteur, elle est faite de fer et a été initialement critiquée, mais elle est devenue un symbole mondial de la France et de l\'ingenierie moderne. Elle attire des millions de visiteurs chaques années pour sa vue panoramique sur la ville.')">
+            <img src="images/notre_dame.webp"  alt="notredame" onclick="afficherTexte('Notre-Dame','Notre-Dame de Paris est une cathédrale gothique emblématique, célèbre pour ses arches élancées, ses vitraux colorés et ses sculptures détaillées. Située sur l\'île de la Cité, elle est un symbole de l\'histoire et de l\'architecture française.')">
+            <img src="images/arc_de_triomphe.webp" alt="arc_de_triomphe" onclick="afficherTexte('Arc de Triomphe','L\'Arc de Triomphe, situé sur la Place Charles de Gaulle à Paris, est un monument emblématique construit pour honorer les soldats français qui ont combattu pendant les guerres révolutionnaires et napoléoniennes. Inauguré en 1836, il est décoré de sculptures et porte les noms de nombreux généraux, offrant une vue panoramique de la ville depuis son sommet.')">
+            <img src="images/mont_saint_michel.webp" alt="mont_saint_michel" onclick="afficherTexte('Le Mont Saint-Michel','Le Mont-Saint-Michel est une île rocheuse et une commune située en Normandie, célèbre pour son abbaye médiévale perchée au sommet d\'une colline. Entouré par des marées impressionnantes, ce site classé au patrimoine mondial de l\'UNESCO est un symbole de l\'architecture religieuse et attire des millions de visiteurs chaque année.')">
+            <img src="images/versailles.webp" alt="versailles" onclick="afficherTexte('Versailles','Le Château de Versailles, situé près de Paris, est un symbole de la puissance royale française et un chef-d\'œuvre de l\'architecture classique. Construit au XVIIe siècle, il est célèbre pour ses jardins à la française, ses somptueux appartements et la Galerie des Glaces, qui reflètent la grandeur de l\'Ancien Régime.')"> 
+        </section>
+
+        <section id="info">
+            <div class="description">
+            <h2 id="title"> </h2>
+            <p id="text-content"> </p>
+            </div>
+        </section>
+
+        <div id="map" style="height: 500px;" width="100%"></div>
+
+
+    </div>
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
